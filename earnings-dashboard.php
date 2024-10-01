@@ -79,8 +79,8 @@ function revenue_admin_page_content()
                 input,
                 select,
                 .updates-msg {
-                    margin: 3px auto;
-                    width: 90%;
+                    margin: 3px 3px 3px 0;
+                    width: 95%;
                 }
             }
         </style>
