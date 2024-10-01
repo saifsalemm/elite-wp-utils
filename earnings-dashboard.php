@@ -80,7 +80,7 @@ function revenue_admin_page_content()
                 select,
                 .updates-msg {
                     margin: 3px 3px 3px 0;
-                    width: 95%;
+                    width: 95% !important;
                 }
             }
         </style>
