@@ -63,8 +63,6 @@ function revenue_admin_page_content()
                 margin: auto;
             }
 
-            input,
-            select,
             .updates-msg,
             .submit_meta_update,
             .fees_select {
@@ -78,6 +76,10 @@ function revenue_admin_page_content()
 
             .fees_container {
                 width: 50%;
+            }
+
+            .submit_fees_report {
+                width: 50% !important;
             }
 
             @media screen and (max-width: 600px) {
@@ -112,7 +114,7 @@ function revenue_admin_page_content()
                 <option value="12">December</option>
             </select><br>
 
-            <input type="submit" name="submit_meta_update" value="Update"><br>
+            <input type="submit" name="submit_fees_report" value="Get report"><br>
             <div id="updates-msg" class="updates-msg" style="display:none;">
                 <p id="tutor-error-msg" class="tutor-error-msg"></p>
             </div>
