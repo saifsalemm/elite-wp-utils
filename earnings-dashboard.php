@@ -66,7 +66,8 @@ function revenue_admin_page_content()
             input,
             select,
             .updates-msg,
-            .submit_meta_update {
+            .submit_meta_update,
+            .fees_select {
                 margin: 3px 3px 3px 0;
                 width: 25%;
             }
@@ -80,7 +81,8 @@ function revenue_admin_page_content()
                 input,
                 select,
                 .updates-msg,
-                .submit_meta_update {
+                .submit_meta_update,
+                .fees_select {
                     margin: 3px 3px 3px 0;
                     width: 95% !important;
                 }
@@ -92,12 +94,12 @@ function revenue_admin_page_content()
         <form id="get_tutor_fees_form">
 
             <label for="tutor">Select Tutor: </label><br>
-            <select id="tutor_id" name="tutor_id" required>
+            <select id="tutor_id" class="fees_select" name="tutor_id" required>
                 <?php echo get_tutors(); ?>
             </select><br>
 
             <label for="month_fees">Select Month: </label><br>
-            <select id="month_fees" name="month_fees" required>
+            <select id="month_fees" class="fees_select" name="month_fees" required>
                 <option value="1">January</option>
                 <option value="2">February</option>
                 <option value="3">March</option>
