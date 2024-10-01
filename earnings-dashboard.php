@@ -80,6 +80,7 @@ function revenue_admin_page_content()
 
             .submit_fees_report {
                 width: 50% !important;
+                margin: 2rem auto;
             }
 
             @media screen and (max-width: 600px) {
