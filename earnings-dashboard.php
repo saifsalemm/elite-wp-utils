@@ -23,7 +23,7 @@ function get_tutors()
     $tutors = get_users($args);
 
     foreach ($tutors as $tutor) {
-        echo '<option value="' . $tutor->ID . '">' . $tutor->display_name . '</option>';
+        echo '<option value="' . $tutor->ID . '">' . $tutor->display_name . ' - ' . $tutor->user_email . '</option>';
     }
 }
 
