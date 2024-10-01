@@ -79,8 +79,9 @@ function revenue_admin_page_content()
             }
 
             .submit_fees_report {
-                width: 50% !important;
-                margin: 2rem auto;
+                display: inline-block;
+                width: 30% !important;
+                margin: 5px auto;
             }
 
             @media screen and (max-width: 600px) {
@@ -115,7 +116,7 @@ function revenue_admin_page_content()
                 <option value="12">December</option>
             </select><br>
 
-            <input type="submit" name="submit_fees_report" value="Get report"><br>
+            <input type="submit" class="submit_fees_report" name="submit_fees_report" value="Get report"><br>
             <div id="updates-msg" class="updates-msg" style="display:none;">
                 <p id="tutor-error-msg" class="tutor-error-msg"></p>
             </div>
