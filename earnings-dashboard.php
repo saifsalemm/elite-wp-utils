@@ -69,29 +69,27 @@ function revenue_admin_page_content()
             .submit_meta_update,
             .fees_select {
                 margin: 3px 3px 3px 0;
-                width: 25%;
+                width: 100%;
             }
 
             form {
                 margin: 5px;
             }
 
-            @media screen and (max-width: 600px) {
+            .fees_container {
+                width: 50%;
+            }
 
-                input,
-                select,
-                .updates-msg,
-                .submit_meta_update,
-                .fees_select {
-                    margin: 3px 3px 3px 0;
-                    width: 95% !important;
+            @media screen and (max-width: 600px) {
+                .fees_container {
+                    width: 100%;
                 }
             }
         </style>
         <!------------------------------------------------------------------------------------------------------------------------------>
         <h1>Get tutor platform fees</h1>
 
-        <form id="get_tutor_fees_form">
+        <form id="get_tutor_fees_form" class="fees_container">
 
             <label for="tutor">Select Tutor: </label><br>
             <select id="tutor_id" class="fees_select" name="tutor_id" required>
