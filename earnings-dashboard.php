@@ -73,6 +73,16 @@ function revenue_admin_page_content()
             form {
                 margin: 5px;
             }
+
+            @media screen and (max-width: 600px) {
+
+                input,
+                select,
+                .updates-msg {
+                    margin: 3px 3px 3px 0;
+                    width: 80%;
+                }
+            }
         </style>
         <!------------------------------------------------------------------------------------------------------------------------------>
         <h1>Get tutor platform fees</h1>
