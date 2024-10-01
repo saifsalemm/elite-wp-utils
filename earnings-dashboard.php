@@ -65,7 +65,8 @@ function revenue_admin_page_content()
 
             input,
             select,
-            .updates-msg {
+            .updates-msg,
+            .submit_meta_update {
                 margin: 3px 3px 3px 0;
                 width: 25%;
             }
@@ -78,7 +79,8 @@ function revenue_admin_page_content()
 
                 input,
                 select,
-                .updates-msg {
+                .updates-msg,
+                .submit_meta_update {
                     margin: 3px 3px 3px 0;
                     width: 95% !important;
                 }
