@@ -22,25 +22,25 @@ const Table = ({
           <h2 className="tutor-name">{`تقرير أ. ${data?.tutor_name} عن شهر ${
             monthsMapper[data?.month as keyof typeof monthsMapper]
           }`}</h2>
-          <table>
+          <table className="rev-table">
             <thead>
-              <tr>
-                <th>القسم</th>
-                <th>الأكواد المستخدمة</th>
-                <th>المبلغ</th>
+              <tr className="rev-tr">
+                <th className="rev-th">القسم</th>
+                <th className="rev-th">الأكواد المستخدمة</th>
+                <th className="rev-th">المبلغ</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>تكلفة السرفر</td>
-                <td>ـــ</td>
-                <td>300</td>
+              <tr className="rev-tr">
+                <td className="rev-td">تكلفة السرفر</td>
+                <td className="rev-td">ـــ</td>
+                <td className="rev-td">300</td>
               </tr>
               {data.tutor_earnings.map((item) => (
-                <tr key={item.cat_id}>
-                  <td>{item.cat_name}</td>
-                  <td>{item.orders_count}</td>
-                  <td>{item.orders_count * 5}</td>
+                <tr className="rev-tr" key={item.cat_id}>
+                  <td className="rev-td">{item.cat_name}</td>
+                  <td className="rev-td">{item.orders_count}</td>
+                  <td className="rev-td">{item.orders_count * 5}</td>
                 </tr>
               ))}
             </tbody>

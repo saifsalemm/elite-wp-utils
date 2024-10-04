@@ -12,24 +12,24 @@
   padding: 1rem;
 }
 
-table,
-td,
-th,
-tr {
+.rev-table,
+.rev-td,
+.rev-th,
+.rev-tr {
   padding: 0.5rem;
   border: 1px solid #333;
   border-collapse: collapse;
   width: 100%;
 }
 
-td,
-th {
+.rev-td,
+.rev-th {
   text-wrap: nowrap;
   width: 33.33%;
   text-align: center;
 }
 
-th {
+.rev-th {
   background: #ddd;
 }
 
