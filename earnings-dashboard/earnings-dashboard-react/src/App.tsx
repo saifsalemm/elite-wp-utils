@@ -28,12 +28,13 @@ function App() {
     tutor_name,
     tutor_email,
     month,
+    year,
   }: TutorEarningsI) => {
     setIsPending(true);
     try {
       const data = await (
         await fetch(
-          `/wp-json/elite/v1/get-tutor-earnings?tutor_id=${tutor_id}&tutor_name=${tutor_name}&tutor_email=${tutor_email}&month=${month}`
+          `https://api.eliteacademyeg.com/wp-json/elite/v1/get-tutor-earnings?tutor_id=${tutor_id}&tutor_name=${tutor_name}&tutor_email=${tutor_email}&month=${month}&year=${year}`
         )
       ).json();
 

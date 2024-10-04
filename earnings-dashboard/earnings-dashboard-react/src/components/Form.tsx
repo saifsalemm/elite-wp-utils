@@ -1,15 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 
 export const monthsMapper = {
-  "1": "يناير",
-  "2": "فبراير",
-  "3": "مارس",
-  "4": "ابريل",
-  "5": "مايو",
-  "6": "يونيو",
-  "7": "يوليو",
-  "8": "اغسطس",
-  "9": "سبتمبر",
+  "01": "يناير",
+  "02": "فبراير",
+  "03": "مارس",
+  "04": "ابريل",
+  "05": "مايو",
+  "06": "يونيو",
+  "07": "يوليو",
+  "08": "اغسطس",
+  "09": "سبتمبر",
   "10": "اكتوبر",
   "11": "نوفمبر",
   "12": "ديسمبر",
@@ -61,21 +61,7 @@ const Form = ({
   }, []);
 
   return (
-    <form
-      className="fees_container"
-      onSubmit={() => {
-        const tutor = tutorData?.filter(
-          (item) => item.id === tutorRef?.current?.value!
-        )[0];
-        getTutorEarnings({
-          tutor_id: tutor?.id!,
-          tutor_name: tutor?.name!,
-          tutor_email: tutor?.email!,
-          month: monthRef.current?.value ?? "",
-          year: yearRef.current?.value ?? "",
-        });
-      }}
-    >
+    <div className="fees_container">
       <label htmlFor="tutor">Select Tutor: </label>
       <br />
       <select ref={tutorRef} className="fees_select" name="tutor_id" required>
@@ -106,18 +92,31 @@ const Form = ({
       />
       <br />
 
-      <input
-        type="submit"
+      <button
+        onClick={() => {
+          const tutor = tutorData?.filter(
+            (item) => String(item.id) === String(tutorRef?.current?.value!)
+          )[0];
+          getTutorEarnings({
+            tutor_id: tutor?.id!,
+            tutor_name: tutor?.name!,
+            tutor_email: tutor?.email!,
+            month: monthRef.current?.value ?? "",
+            year: yearRef.current?.value ?? "",
+          });
+        }}
+        type="button"
         className="submit_fees_report"
         name="submit_fees_report"
-        value="Get report"
-      />
+      >
+        Get Report
+      </button>
       <br />
       <div className="updates-msg" style={{ display: "none" }}>
         {error && <p className="tutor-error-msg">{error}</p>}
       </div>
       <span className="elite-spinner" style={{ display: "none" }}></span>
-    </form>
+    </div>
   );
 };
 
